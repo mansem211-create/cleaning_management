@@ -1,0 +1,110 @@
+:root {
+    /* Updated Maroon Branding */
+    --fluent-primary: #800000;
+    --fluent-primary-hover: #5e0000;
+    
+    /* Keep your existing structure */
+    --fluent-bg: #F3F3F3;
+    --fluent-surface: rgba(255, 255, 255, 0.7);
+    --fluent-surface-solid: #FFFFFF;
+    --fluent-text: #111111;
+    --fluent-text-secondary: #605E5C;
+    --fluent-border: rgba(0, 0, 0, 0.05);
+    --shadow-flyout: 0 8px 16px rgba(0,0,0,0.14);
+    --shadow-card: 0 2px 4px rgba(0,0,0,0.04);
+}
+/* Keep the rest of your existing CSS exactly as it is below this point */
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Segoe UI Variable', 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+    background: var(--fluent-bg); color: var(--fluent-text);
+    display: flex; height: 100vh; overflow: hidden;
+}
+
+/* Authentication Box */
+.login-container {
+    display: flex; justify-content: center; align-items: center;
+    height: 100vh; width: 100vw; background-color: #E6E6E6;
+}
+.login-box {
+    background: var(--fluent-surface-solid); padding: 40px; border-radius: 8px;
+    box-shadow: var(--shadow-flyout); width: 100%; max-width: 400px; text-align: center;
+}
+.login-box h2 { margin-bottom: 20px; font-weight: 600; }
+
+/* Sidebar */
+.sidebar {
+    width: 260px; background: var(--fluent-surface-solid);
+    padding: 24px 12px; display: flex; flex-direction: column; gap: 4px;
+    border-right: 1px solid var(--fluent-border);
+}
+.sidebar h3 {
+    padding-left: 12px; margin-bottom: 24px; font-size: 14px;
+    text-transform: uppercase; color: var(--fluent-text-secondary);
+}
+.nav-item {
+    display: flex; align-items: center; padding: 10px 12px;
+    color: var(--fluent-text); text-decoration: none; border-radius: 4px;
+    font-size: 15px; transition: all 0.1s ease-in-out;
+}
+.nav-item:hover { background: rgba(0, 0, 0, 0.04); }
+.nav-item.active { background: var(--fluent-primary); color: white; font-weight: 600; }
+
+/* Main Content */
+.main-content {
+    flex: 1; padding: 40px; overflow-y: auto;
+    background: linear-gradient(180deg, #FAFAFA 0%, var(--fluent-bg) 100%);
+}
+.page-header { margin-bottom: 40px; }
+.page-header h1 { font-size: 28px; font-weight: 600; letter-spacing: -0.5px; }
+
+/* Fluent Cards */
+.fluent-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
+.fluent-card {
+    background: var(--fluent-surface); backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 8px;
+    padding: 24px; box-shadow: var(--shadow-card); transition: transform 0.2s, box-shadow 0.2s;
+}
+.fluent-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-flyout); }
+
+/* Forms & Inputs */
+.fluent-form { display: flex; flex-direction: column; gap: 16px; }
+.form-group label { font-size: 14px; font-weight: 500; margin-bottom: 6px; display: block; }
+.form-group input, .form-group select {
+    width: 100%; padding: 10px 12px; border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 4px; background: #FFFFFF; font-size: 15px;
+    border-bottom: 2px solid rgba(0,0,0,0.2); transition: all 0.2s;
+}
+.form-group input:focus, .form-group select:focus {
+    outline: none; border-bottom: 2px solid var(--fluent-primary); background: #FAFAFA;
+}
+.btn-fluent {
+    background: var(--fluent-primary); color: white; border: none; padding: 10px 24px;
+    border-radius: 4px; font-size: 15px; font-weight: 600; cursor: pointer; display: inline-block;
+}
+.btn-fluent:hover { background: var(--fluent-primary-hover); }
+
+/* Data Tables */
+.fluent-table {
+    width: 100%; border-collapse: collapse; background: var(--fluent-surface-solid);
+    border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-card); margin-top: 20px;
+}
+.fluent-table th, .fluent-table td { padding: 14px 20px; text-align: left; border-bottom: 1px solid var(--fluent-border); }
+.fluent-table th { background: rgba(0,0,0,0.02); font-weight: 600; color: var(--fluent-text-secondary); font-size: 13px; text-transform: uppercase; }
+:root {
+    --primary-maroon: #800000;
+    --hover-maroon: #5e0000;
+    --bg-light: #f4f4f4;
+}
+* { box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+body { display: flex; margin: 0; background: var(--bg-light); height: 100vh; }
+.sidebar { width: 250px; background: #fff; border-right: 2px solid var(--primary-maroon); padding: 20px; }
+.logo-area img { width: 100%; margin-bottom: 20px; }
+.nav-item { display: block; padding: 10px; color: #333; text-decoration: none; border-radius: 5px; }
+.nav-item.active { background: var(--primary-maroon); color: #fff; }
+.main-content { flex: 1; padding: 30px; overflow-y: auto; }
+.card { background: #fff; padding: 20px; border-radius: 8px; border-top: 5px solid var(--primary-maroon); box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
